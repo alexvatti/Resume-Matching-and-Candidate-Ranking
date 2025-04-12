@@ -28,4 +28,4 @@ The project aims to develop a system that automatically processes resumes, extra
 
 5. Open With Vscode , Python Vesion : 3.10.10
 
-Run 
+   Run 
