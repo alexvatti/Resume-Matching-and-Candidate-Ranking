@@ -4,20 +4,28 @@ The project aims to develop a system that automatically processes resumes, extra
 (such as skills, education, and experience), and ranks candidates based on their relevance to a job description. 
 
 ## Installation
-Step 1:
-git clone https://github.com/alexvatti/Resume-Matching-and-Candidate-Ranking.git
 
-Step 2: 
-cd Resume-Matching-and-Candidate-Ranking
+1. Clone this repository to your local machine using:
 
-Step 3:
-pip install -r requirements.txt
+```bash
+  git clone https://github.com/alexvatti/Resume-Matching-and-Candidate-Ranking.git
+```
+2. Navigate to the project directory:
 
-Step 4:
-python -m spacy download en_core_web_sm
+```bash
+  cd Resume-Matching-and-Candidate-Ranking
+```
+3. Install the required dependencies using pip:
 
-Step 5:
-Open With Vscode , Python Vesion : 3.10.10
+```bash
+  pip install -r requirements.txt
+```
 
-Step 6:
+4. To download the en_core_web_sm model for spaCy
+```bash
+  python -m spacy download en_core_web_sm
+```
+
+5. Open With Vscode , Python Vesion : 3.10.10
+
 Run 
