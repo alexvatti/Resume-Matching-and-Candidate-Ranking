@@ -17,6 +17,7 @@ from sklearn.metrics import classification_report,confusion_matrix
 from sklearn.preprocessing import LabelEncoder
 import matplotlib.pyplot as plt
 import seaborn as sns
+import pickle
 
 # Ensure required NLTK resources are downloaded
 nltk.download('punkt')
@@ -228,6 +229,12 @@ def classify_resumes(resumes, labels, new_resume=None):
     plt.xlabel("Predicted Label")
     plt.ylabel("True Label")
     plt.show()
+
+    with open('resume_classification_model.pkl', 'wb') as file:
+        pickle.dump(clf, file)
+
+    with open('resume_label_encoder.pkl', 'wb') as file:
+        pickle.dump(le, file)
     
     # If a new resume is provided, classify it
     if new_resume:
