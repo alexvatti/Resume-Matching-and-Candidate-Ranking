@@ -116,7 +116,7 @@ def extract_skill_edu_exp(text):
     }
 
     # Compile regex patterns for matching categories
-    skills_patten = re.compile(r'\b(' + '|'.join(skills_keywords) + r')\b', re.IGNORECASE)
+    skills_pattern = re.compile(r'\b(' + '|'.join(skills_keywords) + r')\b', re.IGNORECASE)
     edu_pattern = re.compile(r'\b(' + '|'.join(education_keywords) + r')\b', re.IGNORECASE)
     work_pattern = re.compile(r'\b(' + '|'.join(work_keywords) + r')\b', re.IGNORECASE)
     # Lists to store matched lines
@@ -132,7 +132,7 @@ def extract_skill_edu_exp(text):
         lower = sentence.lower()
 
         # Match and collect skill-related lines
-        if skills_patten.search(lower):
+        if skills_pattern.search(lower):
             skills.append(sentence)
 
         # Match and collect education-related lines
